@@ -1,0 +1,211 @@
+<!--
+Autor: Rafael Pinto Andrades
+Asignatura: LMGSI
+Unidad: UD 2
+Tarea: Tarea evaluativa 2 - Sitio web
+En esta unidad didáctica se pide crear un sitio web en el que se muestre información sobre algo.
+El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes funcionalidades:
+- Presentación del sitio
+- Zona de navegación principal que permita el acceso a distintos contenidos.
+- Páginas de contenidos:
+  - Listado de noticias.
+  - Listado de productos con link a información detallada de al menos un producto.
+  - Formulario para contactar y enviar comentarios por correo.
+
+URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Datos de la página.-->
+	<meta charset="utf-8">
+    <meta name="description" content="Sitio web">
+    <meta name="keywords" content="Bungalows, alquiler">
+    <title>Primer sitio web - alquiler</title>
+
+    <!--Fichero de estilos que utilizaremos en la página.-->
+    <link rel="stylesheet" href="css/estilos_v01.css">
+</head>
+
+<body>
+<!--Hacemos uso de etiquetas semánticas para estructurar la página.-->
+
+<!--Zona de visualización para la cabecera. Incluye zona de visualización para la navegación 
+    con vínculos hipertexto.-->
+<header >
+    <div class="contenedor">
+        <p class="logo">BungalowRent</p>
+        <nav>
+            <!--Listado con links a referencias internas.-->
+            <a href="index.html">Inicio</a>
+            <a href="alquiler.html">Alquiler</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="formulario.html">Reservas</a>
+        </nav>
+    </div>
+</header>
+ 
+<!--Zona de visualización para la navegación con vínculos hipertexto. 
+    Se posiciona en el costado izquierdo.-->
+<nav>
+    <h3>Alquiler:</h3>
+    <!--Listado con links a referencias internas.-->
+    <ul>
+        <li><a href="alquiler.html#tipo1">Tipo 1</a></li>
+        <li><a href="alquiler.html#tipo2">Tipo 2</a></li>
+        <li><a href="alquiler.html#tipo3">Tipo 3</a></li>
+    </ul>
+</nav>
+
+<!--Permite mostrar un contenido central. Aquí va la presentación de la página.-->
+<main>
+    
+   <h1>Nuestro catálogo de bungalows</h1>
+   <p>Te presentamos nuestra gama completa de bungalows. Los encontraras de todos los tipos 
+    y necesidades:</p>
+   <ul>
+        <li>Tipo 1: Bungalows de lujo: Para lo que quieren todo.</li>
+        <li>Tipo 2: Bungalows básicos: Pero con todo lo necesario.</li>
+        <li>Tipo 3: Cabañas rusticas: Para vivir aú más la aventura.</li>
+   </ul>
+
+</main>
+
+<!--Muestrario con todos los bungalows disponibles.--> 
+<section id="catalogo">
+    <!--Agrupamos aquí los bungalows que corresponden al tipo de bungalow 1.--> 
+    <article id="tipo1">
+        <h2>Bungalows de lujo</h2>
+        <div class="contenedor_cartas">
+            <!--Cada bungalow disponible se presenta en una "carta" o marco que lo delimita.--> 
+            <div class="carta">
+                <h3>Bungalow de lujo 01</h3>
+                <p>Equipado a la última y con un diseño de vanguardia, este bungalow no tiene nada 
+                    que enviadir a cualquier habitación hotel o apartamento que conozca. Dispone de 
+                    3 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow de lujo 02</h3>
+                <p>Equipado a la última y con un diseño de vanguardia, este bungalow no tiene nada 
+                    que enviadir a cualquier habitación hotel o apartamento que conozca. Dispone de 
+                    2 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow de lujo 03</h3>
+                <p>Equipado a la última y con un diseño de vanguardia, este bungalow no tiene nada 
+                    que enviadir a cualquier habitación hotel o apartamento que conozca. Dispone de 
+                    3 habitaciones, 2 cuartos de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow de lujo 04</h3>
+                <p>Equipado a la última y con un diseño de vanguardia, este bungalow no tiene nada 
+                    que enviadir a cualquier habitación hotel o apartamento que conozca. Dispone de 
+                    4 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow de lujo 05</h3>
+                <p>Equipado a la última y con un diseño de vanguardia, este bungalow no tiene nada 
+                    que enviadir a cualquier habitación hotel o apartamento que conozca. Dispone de 
+                    3 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+        </div>
+    </article>
+
+    <!--Agrupamos aquí los bungalows que corresponden al tipo de bungalow 2.--> 
+    <article id="tipo2">
+        <h2>Bungalows básicos</h2>
+        <div class="contenedor_cartas">
+            <!--Cada bungalow disponible se presenta en una "carta" o marco que lo delimita.--> 
+            <div class="carta">
+                <h3>Bungalow modelo básico 01</h3>
+                <p>No se deje llevar por el nombre del bungalow, ya que no echará en falta ninguna 
+                    comodidad. Los acabados en madera le harán sentirse en la misma naturaleza. 
+                    Dispone de 3 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow modelo básico 02</h3>
+                <p>No se deje llevar por el nombre del bungalow, ya que no echará en falta ninguna 
+                    comodidad. Los acabados en madera le harán sentirse en la misma naturaleza. 
+                    Dispone de 2 habitaciones, baño, cocina y sala TV.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow modelo básico 03</h3>
+                <p>No se deje llevar por el nombre del bungalow, ya que no echará en falta ninguna 
+                    comodidad. Los acabados en madera le harán sentirse en la misma naturaleza. 
+                    Dispone de 2 habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>  
+        </div>
+    </article>
+
+    <!--Agrupamos aquí los bungalows que corresponden al tipo de bungalow 3.--> 
+    <article id="tipo3">
+        <h2>Cabañas rusticas</h2>
+        <div class="contenedor_cartas">
+            <!--Cada bungalow disponible se presenta en una "carta" o marco que lo delimita.--> 
+            <div class="carta">
+                <h3>Bungalow modelo rustico 01</h3>
+                <p>¿Quién dijo que una cabaña era un alojamiento sin glamour?. Abandone todos los 
+                    estereotipos y déjese sorprender por esta construcción. Dispone de 3 
+                    habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>
+            <div class="carta">
+                <h3>Bungalow modelo rustico 02</h3>
+                <p>¿Quién dijo que una cabaña era un alojamiento sin glamour?. Abandone todos los 
+                    estereotipos y déjese sorprender por esta construcción. Dispone de 2 
+                    habitaciones, cuarto de baño y cocina.</p>
+                <boton-normal><a href="detalle.html">+ Info</a></boton-normal>
+            </div>  
+        </div>
+    </article>    
+</section>
+
+<!--La página presenta un botón (con posición fija) que permite volver a la parte superior de la misma.--> 
+<a href="#" class="boton-fijo"></a>
+
+
+<!--Zona de visualización para el pie de página. Incluye zona de visualización para las atribuciones.-->
+<footer>
+    <h5>Listado de imágenes con licencia Creative Commons</h5>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.geograph.org.uk/photo/6834357">"Bungalows on Falaise Road"</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://www.geograph.org.uk/profile/1768">Ian Cunliffe</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Icono Creative Commons">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Icono Creative Commons BY"></a>
+    </p>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/jlastras/3456755283">"Cabaña de Cinco Personas en el..."</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/jlastras/">Javier Lastras</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Icono Creative Commons">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Icono Creative Commons BY"></a>
+    </p>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Row_of_five_red_wooden_bungalows_on_stilts_with_terraces_and_steep_roofs_Otherside_guesthouse_Vang_Vieng_Laos.jpg">"Row of five red wooden..."</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/User:Basile_Morin">Basile Morin</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Icono Creative Commons">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Icono Creative Commons BY"></a>
+    </p>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flaticon.com/free-icon/up-arrow_271239?term=up+arrow&page=1&position=10&origin=tag&related_id=271239">"up arrow icons"</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flaticon.com/icons">"Roundicons - Flaticon"</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Icono Creative Commons">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Icono Creative Commons BY"></a>
+    </p>    
+</footer>
+ 
+</body>
+</html>

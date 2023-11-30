@@ -1,0 +1,115 @@
+<!--
+Autor: Rafael Pinto Andrades
+Asignatura: LMGSI
+Unidad: UD 2
+Tarea: Tarea evaluativa 2 - Sitio web
+En esta unidad didáctica se pide crear un sitio web en el que se muestre información sobre algo.
+El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes funcionalidades:
+- Presentación del sitio
+- Zona de navegación principal que permita el acceso a distintos contenidos.
+- Páginas de contenidos:
+  - Listado de noticias.
+  - Listado de productos con link a información detallada de al menos un producto.
+  - Formulario para contactar y enviar comentarios por correo.
+
+URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Datos de la página.-->
+	<meta charset="utf-8">
+    <meta name="description" content="Sitio web">
+    <meta name="keywords" content="Bungalows, alquiler">
+    <title>Primer sitio web - formulario</title>
+
+    <!--Fichero de estilos que utilizaremos en la página.-->
+    <link rel="stylesheet" href="css/estilos_v01.css">
+</head>  
+    
+<body>
+    <form action="mailto:rpinto@birt.eus" method="post" class="form">
+		<h1>Reserva</h1>
+
+		<!--Presentamos los campos de los que consta el formulario en una tabla. De esta manera,
+			ya tenemos organizados la ubicación de cada uno de ellos.
+			En cada fila (tr) pondremos los n campos posibles en una única celda (td).-->
+		<table>
+			<tbody>
+				<!--Fila 1-->
+				<tr><td>
+					<p class="formulario">Nombre:</p><input name="Nombre" type="text">
+					<p class="formulario">Apellidos:</p><input name="Apellidos" type="text">
+				</td></tr>
+				
+				<!--Fila 2-->
+				<tr><td>
+					<p class="formulario">Email:</p><input name="Email" type="email">
+				</td></tr>
+				
+				<!--Fila 3-->
+				<tr><td>
+					<p class="formulario">Nº adultos:</p><input name="Adultos" type="text" id="adultos">
+					<p class="formulario">Nº niños (menor 12 años):</p><input name="Menores" type="text" id="menores">
+					<p class="formulario">Plaza de parking:</p>     
+					<input name="Parking" value="S" type="radio" checked="checked"><p>S</p>
+					<input name="Parking" value="N" type="radio"><p>N</p>
+				</td></tr>
+				
+				<!--Fila 4-->
+				<tr><td>
+					<p class="formulario">Fecha de entrada:</p><input type="date" name="fechaE">
+					<p class="formulario">Fecha de salida:</p><input type="date" name="fechaS">
+				</td></tr>
+				
+				<!--Fila 5-->
+				<tr><td>
+					<p class="formulario">Bungalow:</p><input  list="listaBungalows" id="lista">
+					<datalist id="listaBungalows" >
+						<option value="De lujo - Bungalow 1">
+						<option value="De lujo - Bungalow 2">
+						<option value="De lujo - Bungalow 3">
+						<option value="De lujo - Bungalow 4">
+						<option value="De lujo - Bungalow 5">
+						<option value="Básico - Bungalow 1">
+						<option value="Básico - Bungalow 2">
+						<option value="Básico - Bungalow 3">
+						<option value="Cabaña rústica - Bungalow 1">
+						<option value="Cabaña rústica - Bungalow 2">
+					</datalist>
+				</td></tr>
+
+				<!--Fila 6-->
+				<tr><td>
+					<p class="formulario">Escoge los extras que deseas:</p>	
+				</td></tr>
+
+				<!--Fila 7-->
+				<tr><td>
+					<input name="Extras" type="checkbox" value="01">Ropa de cama
+					<input name="Extras" type="checkbox" value="02">Toallas
+					<input name="Extras" type="checkbox" value="03">Menaje cocina
+					<input name="Extras" type="checkbox" value="03">Aire acondicionado
+				</td></tr>
+			
+				<!--Fila 8-->
+				<tr><td>
+					<p class="formulario">Observaciones:</p>
+					<textarea name="observaciones" rows="2" cols="50"></textarea>
+				</td></tr>
+
+				<!--Fila 9: Fila que contendrá los botones.-->
+				<tr><td>
+					<input type="submit" value="Enviar email">
+					<input type="reset" value="Restablecer">
+						<boton-normal><a href="alquiler.html">Volver</a></boton-normal>
+				</td></tr>
+
+			</tbody>
+		</table>
+	</form>      
+
+</body>
+</html>

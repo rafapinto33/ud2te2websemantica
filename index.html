@@ -1,0 +1,104 @@
+<!--
+Autor: Rafael Pinto Andrades
+Asignatura: LMGSI
+Unidad: UD 2
+Tarea: Tarea evaluativa 2 - Sitio web
+En esta unidad didáctica se pide crear un sitio web en el que se muestre información sobre algo.
+El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes funcionalidades:
+- Presentación del sitio
+- Zona de navegación principal que permita el acceso a distintos contenidos.
+- Páginas de contenidos:
+  - Listado de noticias.
+  - Listado de productos con link a información detallada de al menos un producto.
+  - Formulario para contactar y enviar comentarios por correo.
+
+URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Datos de la página.-->
+	<meta charset="utf-8">
+    <meta name="description" content="Sitio web">
+    <meta name="keywords" content="Bungalows, alquiler">
+    <title>Primer sitio web - detalle</title>
+
+    <!--Fichero de estilos que utilizaremos en la página.-->
+    <link rel="stylesheet" href="css/estilos_v01.css">
+</head>
+
+<body>
+<!--Hacemos uso de etiquetas semánticas para estructurar la página.-->
+
+<!--Zona de visualización para la cabecera. Incluye zona de visualización para la navegación 
+    con vínculos hipertexto.-->
+<header >
+    <div class="contenedor">
+        <p class="logo">BungalowRent</p>
+        <nav>
+            <!--Listado con links a referencias internas.-->
+            <a href="index.html">Inicio</a>
+            <a href="alquiler.html">Alquiler</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="formulario.html">Reservas</a>
+        </nav>
+    </div>
+</header>
+ 
+<!--Zona de visualización para la navegación con vínculos hipertexto. 
+    Se posiciona en el costado izquierdo.-->
+<nav>
+    <h3>Alquiler:</h3>
+    <!--Listado con links a referencias internas.-->
+    <ul>
+        <li><a href="alquiler.html#tipo1">Tipo 1</a></li>
+        <li><a href="alquiler.html#tipo2">Tipo 2</a></li>
+        <li><a href="alquiler.html#tipo3">Tipo 3</a></li>
+    </ul>
+</nav>
+
+<!--Permite mostrar un contenido central. Aquí va la presentación de la página.-->
+<main>
+    
+    <h1>Alquiler de bungalows al mejor precio</h1>
+    <div class="imagen-alrededor">
+        <img src="./img/Bungalow_en_camping.jpg" alt="Bungalow en camping" width="240" height="180">    
+
+    </div>
+    <p>Disfruta de unas vacaciones al aire libre. Desde que te levantes hasta que te acuestes, 
+        estarás tomando el aire fresco.
+        Podrás llevar el ritmo que te apetezca, sin horarios de comedor, ni colas para el check-in.
+        La libertad no está reñida con la comodidad. Disfrutas de una habitaciones de lujo.</p>        
+    <p>¡No lo dudes más y prueba una nueva forma de pasar tus vacaciones!</p>
+    <h3>Nuestros servicios incluyen:</h3>
+    <ul>
+        <li>Seguro a todo riesgo que te cubra en cualquier percance y/o robo en el bungalow.</li>
+        <li>Posiblidad de traslado al aeropuerto/estación si lo necesitas.</li>
+        <li>Alquiler de ropa de cama y baño.</li>
+        <li>Aparcamiento incluido junto al bungalow.</li>
+    </ul>
+
+</main>
+
+<!--Zona de visualización para el pie de página. Incluye zona de visualización para las atribuciones.-->
+<footer>
+    <h5>Listado de imágenes con licencia Creative Commons</h5>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/100809585@N02/9600241284">"Texture-Wood-01"</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://www.flickr.com/photos/100809585@N02">mike.clayton01</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0
+            <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Icono Creative Commons">
+            <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Icono Creative Commons BY"></a>
+    </p>
+    <p>
+        <a target="_blank" rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/File:Camping_%C3%89rd_bungalow.jpg">"Camping Érd bungalow"</a> by
+        <a target="_blank" rel="noopener noreferrer" href="https://en.wikivoyage.org/wiki/fr:User:(WT-fr)_Roland_Pierret">Roland_Pierret</a> is licensed under
+        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Public_domain">Public domain
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Cc-public_domain_mark.svg" alt="Icono Wikipedia Commons"></a>
+    </p>
+</footer>
+ 
+</body>
+</html>

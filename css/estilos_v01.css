@@ -1,0 +1,500 @@
+/*
+Autor: Rafael Pinto Andrades
+Asignatura: LMGSI
+Unidad: UD 2
+Tarea: Tarea evaluativa 2 - Sitio web
+En esta unidad didáctica se pide crear un sitio web en el que se muestre información sobre algo.
+El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes funcionalidades:
+- Presentación del sitio
+- Zona de navegación principal que permita el acceso a distintos contenidos.
+- Páginas de contenidos:
+  - Listado de noticias.
+  - Listado de productos con link a información detallada de al menos un producto.
+  - Formulario para contactar y enviar comentarios por correo.
+
+URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+*/
+
+
+/* Especificamos las fuentes que vamos a usar. */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* Especificamos las hojas de estilo externas que vamos a usar. */
+@import "normalize.css";
+
+
+/* Forzamos a que el padding y el border pasen a formar parte del cálculo del ancho de la caja. */
+*{
+    box-sizing: border-box;
+}
+
+/* Activar un desplazamiento suave al pulsar en un enlace de anclas */
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+/* Definimos los tamaños de la fuente de los distintos elementos.
+Utilizamos para ello las medidas relativas em, es decir relativas al tamaño de fuente de su contenedor. */
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p {font-size: 1.25em;}
+li {
+    font-size: 1.25em;
+    list-style-type: square;
+}
+
+ul { list-style: none;}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos propios de una estructura semantica.
+**************************************************** */
+header {
+    background-image: url('../img/Madera.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    height: 10%;
+    width: 10%;
+    float: right;
+}
+
+main {
+    background-color:#dbd9d9;
+    float:left;
+    padding: 1%;
+    width: 90%;
+    height: 30%;
+}
+
+section {
+    width:90%;
+}
+
+article { 
+    background-color:#dbd9d9;
+}
+
+footer {
+    font-family: 'Source Code Pro', monospace;
+    background-color:#00A1C0;
+    color:white;
+    clear: both;
+    text-align:center;
+    height:30%;
+    width:100%;
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos contenidos en el header.
+**************************************************** */
+header nav {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    padding-right: 36%;
+    padding-bottom: 0%;
+    background-color: rgba(0,0,0,0.0);
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.50em;
+}
+
+header a:focus {
+    border-bottom: 2px solid;
+    color: rgba(129, 52, 7, 0.98);;
+}
+  
+header a:hover {
+    border-bottom: 2px solid;
+    color: rgba(129, 52, 7, 0.98);
+}
+
+header .contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo {
+    position: relative; /*** Usamos posicionamiento relativo. ***/
+    left: 100px;
+    
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #810707;
+    font-size: 2.6em;
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos contenidos en el nav.
+**************************************************** */
+nav a:focus {
+    color: rgba(129, 52, 7, 0.98);;
+}
+  
+nav a:hover {
+    color: rgba(129, 52, 7, 0.98);
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos contenidos en el section.
+**************************************************** */
+#catalogo, #noticias, #detalle {
+    background-color: #dbd9d9;
+    text-align: center;
+    color: white;
+}
+
+#catalogo h2, #noticias h2, #detalle h2 {
+    margin-top: 0;
+    font-size: 4em;
+    color: #4d4d4d;
+}
+
+#catalogo h3, #noticias h3, #detalle h3 {
+    margin-top: 0;
+}
+
+#catalogo p, #noticias p, #detalle p {
+    margin-bottom: 30px;
+}
+
+#catalogo .contenedor_cartas, #detalle .contenedor_cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta {
+    border-radius: 15px;
+    margin: 30px;
+    background-color: rgba(50, 50, 50, 1);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding: 50px;
+}
+
+#catalogo .carta {
+    width: 25%;
+    background-position: center center;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos contenidos en el footer.
+**************************************************** */
+footer p {
+    font-size: 10px;
+    color: black;
+}
+
+footer a {
+    font-weight: normal;
+    color: black;
+    text-decoration: underline;
+}
+
+footer img {
+    height: 15px; 
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos relacionados con los botones.
+**************************************************** */
+boton-normal {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: black;
+    background-color: rgba(129, 52, 7, 0.98)
+}
+
+boton-normal:hover{
+    background-color: rgb(166, 78, 26);
+}
+
+.boton-fijo {
+	position: fixed; /*** Usamos posicionamiento fijo. ***/
+	bottom: 40px;
+	right: 40px;
+
+    width: 50px;
+    height: 75px;
+    border-radius: 5px;
+	background-color: rgba(129, 52, 7, 0.497);
+    background-image:url('../img/Flecha_arriba.png');
+    background-repeat:no-repeat;
+    height:60px;
+    width:70px;
+    background-size: 50px 50px;
+    background-position:center;
+}
+
+.boton-fijo:hover {
+	background-color: rgb(166, 78, 26);
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos relacionados con las imágenes.
+**************************************************** */
+.imagen-detalle {
+    border: double;
+    border-color: rgba(50, 50, 50, 1);
+    border-radius: 15px;
+    width: 70%;
+    padding: 20px;
+}
+
+.imagen-alrededor {
+    float: left; /*** Usamos posicionamiento flotante. ***/
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+
+/* *************************************************
+Reglas a aplicar a las imágenes contenidas en cada una 
+de la posibles "cartas" o marcos que rodean a la foto.
+
+En la página "alquiler.html",
+se presenta el muestrario con todos los bungalows disponibles: <section id="catalogo">
+que se agrupan en tipos de bungalows: <article id="tipo1">, <article id="tipo2">,...
+que continen los bungalows concretos: <div class="carta">
+
+Las siguientes reglas, afectan a cada una de las "cartas" de cada "tipo".
+**************************************************** */
+
+
+/* Carta 1 del tipo de bungalow 1*/
+#tipo1 .carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow11.jpg");
+
+}
+/* Carta 2 del tipo de bungalow 1*/
+#tipo1 .carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow11.jpg");
+}
+/* Carta 3 del tipo de bungalow 1*/
+#tipo1 .carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow11.jpg");
+}
+/* Carta 4 del tipo de bungalow 1*/
+#tipo1 .carta:nth-child(4) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow11.jpg");
+}
+/* Carta 5 del tipo de bungalow 1*/
+#tipo1 .carta:nth-child(5) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow11.jpg");
+}
+
+/* Carta 1 del tipo de bungalow 2*/
+#tipo2 .carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow21.jpg");
+
+}
+/* Carta 2 del tipo de bungalow 2*/
+#tipo2 .carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow21.jpg");
+}
+/* Carta 3 del tipo de bungalow 2*/
+#tipo2 .carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow21.jpg");
+}
+
+/* Carta 1 del tipo de bungalow 3*/
+#tipo3 .carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow31.jpg");
+
+}
+/* Carta 2 del tipo de bungalow 3*/
+#tipo3 .carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../img/Bungalow31.jpg");
+}
+
+
+/* *************************************************
+Reglas a aplicar a los elementos relacionados con el formulario.
+**************************************************** */
+form {
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    background-color:rgba(50, 50, 50, 1);
+    width: 680px;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+form h1 {
+    color:white;
+    margin: auto;
+}
+
+form p {
+    text-decoration: underline;
+}
+
+form tr, form td {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    color: white;
+}
+ 
+form input[type="text"] {
+    width:225px;
+    padding:3px 10px;
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+}
+
+form input[type="email"] {
+    width:100%;
+    padding:3px 10px;
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+}
+
+form input[type="date"] {
+    height: 47px;
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color:#f6f6f6;
+    margin: 8px 8px;
+}
+
+form textarea {
+    width:100%;
+    height:100px;
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color:#f6f6f6;			
+    margin:8px 8px;
+}
+
+#adultos, #menores {
+    width: 40px;
+}
+
+#lista {
+    width: 100%;
+    height: 47px;
+    padding:3px 10px;    
+    border:1px solid #f6f6f6;
+    border-radius: 5px;
+    background-color:#f6f6f6;
+    margin:8px 8px;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: black;
+    background-color: rgba(129, 52, 7, 0.98)
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: rgb(166, 78, 26);
+    cursor: pointer;
+}
