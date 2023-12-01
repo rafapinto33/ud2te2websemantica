@@ -3,6 +3,7 @@ Autor: Rafael Pinto Andrades
 Asignatura: LMGSI
 Unidad: UD 2
 Tarea: Tarea evaluativa 2 - Sitio web
+Fecha: 2023-11-30
 En esta unidad didáctica se pide crear un sitio web en el que se muestre información sobre algo.
 El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes funcionalidades:
 - Presentación del sitio
@@ -12,7 +13,9 @@ El sitio tendrá al menos 5 páginas Web y deberá contar con las siguientes fun
   - Listado de productos con link a información detallada de al menos un producto.
   - Formulario para contactar y enviar comentarios por correo.
 
-URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+URL video autoevaluación: https://youtu.be/oZgYPxK4kS4
+URL proyecto web: https://github.com/rafapinto33/ud2te2websemantica
+URL sitio web: https://rafapinto33.github.io/ud2te2websemantica/
 */
 
 
@@ -25,13 +28,13 @@ URL video autoevaluación: xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
 /* Forzamos a que el padding y el border pasen a formar parte del cálculo del ancho de la caja. */
-*{
+* {
     box-sizing: border-box;
 }
 
 /* Activar un desplazamiento suave al pulsar en un enlace de anclas */
-html{
-    scroll-behavior: smooth;
+html { 
+    scroll-behavior: smooth; /*** Funcionalidad innovadora.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 }
 
 body {
@@ -82,29 +85,29 @@ nav {
 }
 
 main {
-    background-color:#dbd9d9;
-    float:left;
+    background-color: #dbd9d9;
+    float: left;
     padding: 1%;
     width: 90%;
     height: 30%;
 }
 
 section {
-    width:90%;
+    width: 90%;
 }
 
 article { 
-    background-color:#dbd9d9;
+    background-color: #dbd9d9;
 }
 
 footer {
     font-family: 'Source Code Pro', monospace;
-    background-color:#00A1C0;
-    color:white;
+    background-color: #00A1C0;
+    color: white;
     clear: both;
     text-align:center;
-    height:30%;
-    width:100%;
+    height: 30%;
+    width: 100%;
 }
 
 
@@ -147,7 +150,7 @@ header .contenedor {
 }
 
 header .logo {
-    position: relative; /*** Usamos posicionamiento relativo. ***/
+    position: relative; /*** Usamos posicionamiento relativo.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
     left: 100px;
     
     margin: 0;
@@ -255,7 +258,7 @@ boton-normal:hover{
 }
 
 .boton-fijo {
-	position: fixed; /*** Usamos posicionamiento fijo. ***/
+	position: fixed; /*** Usamos posicionamiento fijo. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 	bottom: 40px;
 	right: 40px;
 
@@ -263,12 +266,12 @@ boton-normal:hover{
     height: 75px;
     border-radius: 5px;
 	background-color: rgba(129, 52, 7, 0.497);
-    background-image:url('../img/Flecha_arriba.png');
+    background-image: url('../img/Flecha_arriba.png');
     background-repeat:no-repeat;
-    height:60px;
-    width:70px;
+    height: 60px;
+    width: 70px;
     background-size: 50px 50px;
-    background-position:center;
+    background-position: center;
 }
 
 .boton-fijo:hover {
@@ -288,7 +291,7 @@ Reglas a aplicar a los elementos relacionados con las imágenes.
 }
 
 .imagen-alrededor {
-    float: left; /*** Usamos posicionamiento flotante. ***/
+    float: left; /*** Usamos posicionamiento flotante. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
     padding-left: 10px;
     padding-right: 25px;
 }
@@ -419,7 +422,7 @@ form {
 }
 
 form h1 {
-    color:white;
+    color: white;
     margin: auto;
 }
 
@@ -435,38 +438,38 @@ form tr, form td {
 }
  
 form input[type="text"] {
-    width:225px;
-    padding:3px 10px;
-    border:1px solid #f6f6f6;
+    width: 225px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
     background-color:#f6f6f6;
-    margin:8px 8px;
+    margin: 8px 8px;
 }
 
 form input[type="email"] {
-    width:100%;
-    padding:3px 10px;
-    border:1px solid #f6f6f6;
+    width: 100%;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
     background-color:#f6f6f6;
-    margin:8px 8px;
+    margin: 8px 8px;
 }
 
 form input[type="date"] {
     height: 47px;
-    border:1px solid #f6f6f6;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
     background-color:#f6f6f6;
     margin: 8px 8px;
 }
 
 form textarea {
-    width:100%;
-    height:100px;
-    border:1px solid #f6f6f6;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
     background-color:#f6f6f6;			
-    margin:8px 8px;
+    margin: 8px 8px;
 }
 
 #adultos, #menores {
@@ -477,10 +480,10 @@ form textarea {
     width: 100%;
     height: 47px;
     padding:3px 10px;    
-    border:1px solid #f6f6f6;
+    border: 1px solid #f6f6f6;
     border-radius: 5px;
     background-color:#f6f6f6;
-    margin:8px 8px;
+    margin: 8px 8px;
 }
 
 form input[type="submit"], form input[type="reset"] {
@@ -498,3 +501,18 @@ form input[type="submit"]:hover, form input[type="reset"]:hover {
     background-color: rgb(166, 78, 26);
     cursor: pointer;
 }
+
+
+/* *************************************************
+Reglas a aplicar el cambio entre modo claro y oscuro.
+**************************************************** */
+@media (prefers-color-scheme: dark) { /*** Funcionalidad innovadora. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+    body, main, article {
+      color: whitesmoke;;
+      background: #282626;
+    }
+
+    #catalogo h2, a {
+        color: whitesmoke;;
+    }
+  }
